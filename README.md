@@ -61,16 +61,16 @@ Solana Keygen Generator 是一个基于 Python 的 Solana 靓号（Vanity Addres
 
 ```bash
 # 生成以 "ABC" 开头的公钥
-python mian.py -prefix ABC
+python main.py -prefix ABC
 
 # 生成以 "xyz" 结尾的公钥
-python mian.py -suffix xyz
+python main.py -suffix xyz
 
 # 同时指定前缀和后缀
-python mian.py -prefix AB -suffix CD
+python main.py -prefix AB -suffix CD
 
 # 自定义线程数（默认 16）
-python mian.py -prefix ABC -num_threads 32
+python main.py -prefix ABC -num_threads 32
 ```
 
 ### 命令行参数
@@ -91,7 +91,7 @@ python main.py --help
 ## 运行示例
 
 ```
-$ python mian.py -prefix ABC -num_threads 16
+$ python main.py -prefix ABC -num_threads 16
 
 当前进度: 1,234,567 次尝试 | 实时速度: 45,000次/秒 | 平均速度: 42,000次/秒 | 已运行: 29秒 | 预计剩余时间: 2.35分钟
 
@@ -119,7 +119,7 @@ Private Key: 5xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ```
 solana-keygen/
-├── mian.py                    # CPU 多线程靓号生成器（主程序）
+├── main.py                    # CPU 多线程靓号生成器（主程序）
 ├── SolVanityCL-master/        # GPU 加速靓号生成器（第三方）
 │   ├── main.py                # GPU 版本入口
 │   ├── core/                  # 核心模块（CLI、OpenCL 内核）
